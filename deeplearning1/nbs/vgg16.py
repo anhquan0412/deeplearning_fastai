@@ -18,12 +18,12 @@ from keras.preprocessing import image
 
 
 vgg_mean = np.array([123.68, 116.779, 103.939], dtype=np.float32).reshape((3,1,1)) # change to (1,1,3) for tensorflow
-#these 3 numbers are means (for each channel, there are 3) of all images
+#these 3 numbers are means (for each channel, there are 3) of all images in imagenet
 
 
 def vgg_preprocess(x):
     x = x - vgg_mean # to center the data. Another way: normalize each value to z score (x-mean/std)
-    return x[::-1, :,:] # reverse axis rgb->bgr, and change to x[:,:,::-1] for tensorflow
+    return x[::-1,:,:] # reverse axis rgb->bgr, and change to x[:,:,::-1] for tensorflow
 
 
 class Vgg16():
