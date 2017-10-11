@@ -59,8 +59,8 @@ from keras.layers.convolutional import *
 from keras.preprocessing import image, sequence
 from keras.preprocessing.text import Tokenizer
 
-from vgg16 import *
-from vgg16bn import *
+# from vgg16 import *
+# from vgg16bn import *
 np.set_printoptions(precision=4, linewidth=100)
 
 
