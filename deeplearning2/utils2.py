@@ -26,6 +26,7 @@ from keras.preprocessing import image
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Model, Sequential
 from keras.layers import *
+from keras.layers.normalization import BatchNormalization
 from keras.optimizers import Adam
 from keras.regularizers import l2
 from keras.utils.data_utils import get_file
